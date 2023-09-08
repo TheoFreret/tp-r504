@@ -2,8 +2,11 @@ name: tests unitaires
 on: [push]
 jobs:
   build:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Set up Python for Demo
-        run: echo "coucou"
+        uses: actions/setup-python@v4
+      - name: Run tests
+        run: pytest TP1/test.py
      
