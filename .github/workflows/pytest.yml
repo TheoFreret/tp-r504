@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Install Pytest
         run: pip3 install pytest
+      - name: reload README
+        run: ~/tp-r504/README.md
       - uses: actions/checkout@v3
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
