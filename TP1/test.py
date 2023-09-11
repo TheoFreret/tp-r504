@@ -12,3 +12,7 @@ def test_2():
 def test_3():
 	assert f.puissance(2,8) == 256
 	assert f.puissance(-3,2) == 9
+
+def test_4():
+	assert f.puissance(5,0) == 1
+	assert f.puissance(2,-2) == 0.25

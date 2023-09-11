@@ -4,5 +4,15 @@ def puissance(a,b):
 	elif not type(b) is int:
 		raise TypeError("Only integers are allowed")
 	else :
-		return a**b
+		ab = 1
+		if b>0 :
+			for x in range(0,b) :
+				ab = ab*a
+		elif b<0 :
+			b = b*-1
+			for x in range(0,b) :
+				ab = ab/a
+		elif b==0 :
+			ab = 1
+		return ab
 
