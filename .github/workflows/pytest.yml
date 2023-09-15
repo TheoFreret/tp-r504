@@ -13,5 +13,8 @@ jobs:
       - run: python --version
       - name: Run tests
         run: pytest TP1/test.py
+      - name: Nom branche
+        run: echo "Nom branche: ${{ github.ref }}"
+        
                 
      
