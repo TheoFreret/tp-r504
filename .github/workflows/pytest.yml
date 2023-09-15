@@ -9,6 +9,9 @@ jobs:
       - name: Install Pytest
         run: pip3 install pytest
       - uses: actions/checkout@v3
+      - run: pwd; lsb_release -a
+      - run: python --version
       - name: Run tests
         run: pytest TP1/test.py
+                
      
