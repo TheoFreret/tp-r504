@@ -16,8 +16,10 @@ RUN pip3 install mysql-connector-python
 
 # Dossier + fichier
 RUN mkdir -p /srv/templates
-RUN cp app_1.py /srv/
-RUN cp index.html /srv/templates/
+RUN whoami
+RUN pwd
+COPY app_1.py /srv/
+COPY index.html /srv/templates/
 
 # cmd qui lance flask et autorisation de connexion extern au conteneur
 CMD ["flask","--app","/src/app_1","run","--host=0.0.0.0"]
