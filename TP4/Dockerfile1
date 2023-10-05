@@ -1,1 +1,24 @@
-build-essensial,python-dev,python3-pip,default-libmysqlclient-dev
+# Image du Dockerfile
+FROM Debian:11
+
+# Installation des paquets Debian
+RUN apt-get update -y
+RUN apt-get build-essential -y
+RUN apt-get python-dev -y
+RUN apt-get python3-pip -y
+RUN apt-get default-libmysqlclient-dev -y
+
+# Installation/Upgrade de pip
+RUN pip3 install --upgrade pip
+
+# Installation des paquets Python avec pip
+RUN pip3 install flask-mysqldb
+RUN pip3 install mysql-connector-python
+
+# Dossier + fichier
+RUN mkdir /srv/templates
+RUN cp ~/index.html /srv/
+RUN cp ~/app1.py /srv/
+
+# cmd qui lance flask et autorisation de connexion extern au conteneur
+CMD ["flask","--app","/src/app1","run","--host=0.0.0.0"]
