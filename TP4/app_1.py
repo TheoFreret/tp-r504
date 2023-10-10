@@ -5,7 +5,7 @@ app = Flask(__name__)
  
 # MySQL configuration
 db_config = {
-    'host': 'demo1-sql',
+    'host': 'tp4-sql',
     'user': 'root',
     'password': 'foo',
     'database': 'demosql',
