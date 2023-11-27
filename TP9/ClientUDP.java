@@ -14,6 +14,7 @@ public class ClientUDP
 			DatagramSocket sock = new DatagramSocket();
 			sock.send(packet);
 			sock.receive(packet);
+
 			sock.close();
 		}
 		catch( Exception ex ) {
