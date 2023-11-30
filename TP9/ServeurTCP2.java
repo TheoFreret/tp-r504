@@ -13,8 +13,8 @@ public class ServeurTCP2
 				System.out.println("Connection d'un client");
 				DataInputStream dIn = new DataInputStream(socket.getInputStream());
 				System.out.println("Message: " + dIn.readUTF());
-				//socket.close();
-				//socketserver.close();
+				socket.close();
+//				socketserver.close();
 			}
 		}
 		catch ( Exception ex ) {

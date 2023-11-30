@@ -16,7 +16,7 @@ public class ServeurTCP3
 				System.out.println("Message: " + msg);
 				String rev = new StringBuilder(msg).reverse().toString();
 				socket.close();
-				socketserver.close();
+//				socketserver.close();
 			}
 		}
 		catch ( Exception ex ) {
