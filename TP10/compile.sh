@@ -1,0 +1,1 @@
+javac -classpath "/home/theo/Downloads/lib/*" *.java
