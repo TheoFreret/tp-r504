@@ -18,6 +18,7 @@ public class Client2
 			CloseableHttpResponse resp = client.execute(request);
 			System.out.println("Response Line: " + resp.getStatusLine());
 			System.out.println("Response Code: " + resp.getStatusLine().getStatusCode());
+
 			InputStreamReader isr = new InputStreamReader(resp.getEntity().getContent());
 			JsonReader reader = Json.createReader(isr);
 			JsonObject jsonObject = reader.readObject();
