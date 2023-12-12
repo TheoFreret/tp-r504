@@ -32,6 +32,23 @@ public class Client3
 					System.out.println("Source=" + Source);
 					String Value = ji.getString("Value");
 					System.out.println("Value=" + Value);
+					if (Value != null && Value.length() > 0 && Value.charAt(Value.length() - 1) == '%')
+					{
+						Value = Value.substring(0, Value.length() -1);
+					}
+					if (Value <= 20){
+						System.out.println("nul");
+					}
+					else if(Value > 20 && Value <= 50){
+						System.out.println("bof");
+					}
+					else if(Value > 50 && Value <= 70){
+						System.out.println("bien");
+					}
+					else if(Value > 70){
+						System.out.println("très bien");
+					}
+					System.out.println("Value=" + Value);
 				}				
 			}
 			isr.close();
@@ -46,3 +63,4 @@ public class Client3
 }
 
 //apikey=751ea6aa
+//String Number = CharMatcher.inRange('0', '9').retainFrom(Value);
